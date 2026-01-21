@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 def get_market_data():
     try:
+        # Busca dados reais da Binance
         res = requests.get("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT").json()
         price = float(res['lastPrice'])
         change = float(res['priceChangePercent'])
@@ -28,7 +29,7 @@ def home():
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AI Signal & Gaming Bot</title>
         <style>
-            body {{ background-color: #0d1117; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px; }}
+            body {{ background-color: #0d1117; color: white; font-family: sans-serif; text-align: center; padding: 20px; }}
             .card {{ background: #161b22; border: 1px solid #30363d; padding: 25px; border-radius: 20px; max-width: 450px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }}
             h2 {{ color: #58a6ff; margin-bottom: 5px; }}
             .price {{ font-size: 1.4em; color: #8b949e; margin-bottom: 10px; }}
@@ -53,10 +54,10 @@ def home():
             
             <a href="https://www.bybit.com/invite?ref=9GMCA" class="btn btn-crypto">🔥 GET CRYPTO SIGNALS (VIP)</a>
             
-            <a href="SUBSTITUA_AQUI_PELO_LINK_DE_JOGO" class="btn btn-gaming">🎰 INTERNATIONAL GAMING ZONE</a>
+            <a href="#" class="btn btn-gaming">🎰 INTERNATIONAL GAMING ZONE</a>
 
             <div class="chart-container">
-                <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_762c4&symbol=BINANCE%3ABTCUSDT&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en" 
+                <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_762c4&symbol=BINANCE%3ABTCUSDT&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&theme=dark&style=1&timezone=Etc%2FUTC&locale=en" 
                         width="100%" height="250" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
             </div>
 
@@ -71,4 +72,3 @@ def home():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-    

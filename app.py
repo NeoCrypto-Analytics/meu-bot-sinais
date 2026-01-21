@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+'s from flask import Flask, jsonify
 import requests
 
 app = Flask(__name__)
@@ -57,8 +57,8 @@ def home():
             <a href="#" class="btn btn-gaming">🎰 INTERNATIONAL GAMING ZONE</a>
 
             <div class="chart-container">
-                <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_762c4&symbol=BINANCE%3ABTCUSDT&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&theme=dark&style=1&timezone=Etc%2FUTC&locale=en" 
-                        width="100%" height="250" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+                <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=60&theme=dark&style=1&timezone=Etc%2FUTC&locale=en" 
+                        width="100%" height="250" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
             </div>
 
             <div class="footer">

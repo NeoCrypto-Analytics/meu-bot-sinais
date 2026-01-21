@@ -10,9 +10,12 @@ def get_market_data():
         price = float(res['lastPrice'])
         change = float(res['priceChangePercent'])
         
-        if change > 0.1: sinal = "🚀 COMPRA"
-        elif change < -0.1: sinal = "📉 VENDA"
-        else: sinal = "⏳ AGUARDANDO"
+        if change > 0.1: 
+            sinal = "🚀 COMPRA"
+        elif change < -0.1: 
+            sinal = "📉 VENDA"
+        else: 
+            sinal = "⏳ AGUARDANDO"
         
         return {"price": f"{price:,.2f}", "sinal": sinal}
     except Exception:
@@ -21,7 +24,7 @@ def get_market_data():
 @app.route('/')
 def home():
     data = get_market_data()
-    # Usamos chavetas duplas {{ }} no CSS para que o Python não as confunda com variáveis
+    # f-string com chavetas duplas {{ }} para o CSS não causar erro
     return f"""
     <!DOCTYPE html>
     <html lang="pt">
@@ -59,6 +62,6 @@ def home():
     """
 
 if __name__ == '__main__':
-    # host='0.0.0.0' é importante para o bot funcionar online (Render/Replit)
+    # Configuração para rodar em servidores externos
     app.run(host='0.0.0.0', port=5000, debug=True)
     

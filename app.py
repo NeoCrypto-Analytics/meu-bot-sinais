@@ -6,7 +6,7 @@ app = Flask(__name__)
 def get_market_data():
     try:
         # Busca dados reais da Binance para o Bitcoin
-        res = requests.get("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT").json()
+        res = requests.get("https://api3.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT").json()
         price = float(res['lastPrice'])
         change = float(res['priceChangePercent'])
         

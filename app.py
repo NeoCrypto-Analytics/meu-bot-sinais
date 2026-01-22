@@ -53,7 +53,7 @@ def home():
             
             <a href="https://www.bybit.com/invite?ref=9GMCA" class="btn btn-crypto">🔥 GET CRYPTO SIGNALS (VIP)</a>
             
-            <a href="#" class="btn btn-gaming">🎰 INTERNATIONAL GAMING ZONE</a>
+            <a href="https://bc.fun/i-4a86j0t7s-n/" class="btn btn-gaming">🎰 INTERNATIONAL GAMING ZONE</a>
 
             <div class="chart-container">
                 <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=60&theme=dark&style=1&timezone=Etc%2FUTC&locale=en" 
